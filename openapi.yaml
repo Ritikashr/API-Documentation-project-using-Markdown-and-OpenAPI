@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: User Management API
+  version: 1.0.0
+
+paths:
+  /auth/login:
+    post:
+      summary: User login
+      requestBody:
+        required: true
+      responses:
+        '200':
+          description: Successful login
+
+  /users/{id}:
+    get:
+      summary: Get user details
+      parameters:
+        - name: id
+          in: path
+          required: true
+      responses:
+        '200':
+          description: User data retrieved
